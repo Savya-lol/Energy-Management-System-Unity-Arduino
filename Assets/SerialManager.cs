@@ -50,7 +50,7 @@ public class SerialManager : MonoBehaviour
 
         try
         {
-            return port.ReadChar().ToString();
+            return port.ReadLine();
         }
         catch (System.Exception e)
         {
