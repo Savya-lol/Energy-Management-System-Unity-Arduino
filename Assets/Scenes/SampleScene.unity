@@ -155,6 +155,53 @@ Transform:
   - {fileID: 460494946}
   m_Father: {fileID: 1920291385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &39742326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39742328}
+  - component: {fileID: 39742327}
+  m_Layer: 0
+  m_Name: WindAPIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &39742327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39742326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e0ddd03e6a7824ab1dd60b91041297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAPIRequests: 120
+  windDir: 
+  windCdir: 
+--- !u!4 &39742328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39742326}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.1737785, y: 2.5217152, z: 4.3260736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &60665187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,11 +4059,14 @@ MonoBehaviour:
   wireC:
   - {fileID: 1662018457}
   - {fileID: 1078503040}
+  wireD: {fileID: 1726890719}
   lightState: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   lightsOnA: 0
   lightsOnB: 0
   solar: {fileID: 1776495869}
   windmill: {fileID: 1526127860}
+  battery: {fileID: 1357284105}
+  windDirection: 0
 --- !u!4 &593522709
 Transform:
   m_ObjectHideFlags: 0
@@ -12107,3 +12157,4 @@ SceneRoots:
   - {fileID: 593522709}
   - {fileID: 571723541}
   - {fileID: 749689222}
+  - {fileID: 39742328}

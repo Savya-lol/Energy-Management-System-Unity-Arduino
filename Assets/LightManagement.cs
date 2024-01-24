@@ -8,10 +8,12 @@ public class LightManagement : MonoBehaviour
 {
     public GameObject[] lights;
     public LineRenderer[] wireA,wireB,wireC;
+    public LineRenderer wireD;
     [SerializeField] int[] lightState = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
     public int lightsOnA, lightsOnB;
-    public SpriteRenderer solar, windmill;
+    public SpriteRenderer solar, windmill,battery;
     public static LightManagement instance;
+    public float windDirection;
 
 
     string olddata;
@@ -45,13 +47,11 @@ public class LightManagement : MonoBehaviour
     {
         lights[index].transform.GetChild(0).gameObject.SetActive(false);
         lights[index].GetComponent<SpriteRenderer>().color = Color.white;
-        print("turned off" + index);
     }
     void LightOn(int index)
     {
         lights[index].transform.GetChild(0).gameObject.SetActive(true);
         lights[index].GetComponent<SpriteRenderer>().color = Color.yellow;
-        print("turned on" + index);
     }
 
     void CheckWire()
@@ -123,6 +123,11 @@ public class LightManagement : MonoBehaviour
                 l.material.color = new Color(0.0f, 0.0f, 0.2f, 1.0f);
             }
         }
+    }
+
+    void WindDirection()
+    {
+
     }
 
     void SendLightData()
@@ -212,6 +217,17 @@ public class LightManagement : MonoBehaviour
             }
             solar.color = Color.white;
             windmill.color = Color.white;
+        }
+
+        if(EMSController.instance.breakdown && EMSController.instance.storage<1)
+        {
+            battery.color = Color.red;
+            wireD.material.color = new Color(0.2f, 0.2f, 0.0f, 1.0f);
+        }
+        else
+        {
+            battery.color = Color.white;
+            wireD.material.color = new Color(1f, 1f, 0.0f, 1.0f);
         }
     }
 }
