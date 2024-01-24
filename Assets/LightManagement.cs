@@ -125,11 +125,6 @@ public class LightManagement : MonoBehaviour
         }
     }
 
-    void WindDirection()
-    {
-
-    }
-
     void SendLightData()
     {
         string msg = "";
@@ -151,6 +146,13 @@ public class LightManagement : MonoBehaviour
 
         if (receivedMessage != null)
         {
+            if(EMSController.instance.breakdown)
+            {
+                if(EMSController.instance.storage<1)
+                {
+                    return;
+                }
+            }
             if (receivedMessage == "1")
             {
                 for (int i = 0; i < 10; i++)
