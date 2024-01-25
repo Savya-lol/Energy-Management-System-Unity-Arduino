@@ -14,7 +14,7 @@ public class LightManagement : MonoBehaviour
     public SpriteRenderer solar, windmill,battery;
     public static LightManagement instance;
     public float windDirection;
-
+    public SerialController sc;
 
     string olddata;
 
@@ -23,7 +23,6 @@ public class LightManagement : MonoBehaviour
         if (instance != null && instance != this) { print("Duplicate of EMSController"); return; }
         instance = this;
     }
-
 
     private void Update()
     {
@@ -132,17 +131,17 @@ public class LightManagement : MonoBehaviour
         {
                 msg += lightState[i] + ",";
         }
-        msg += (EMSController.instance.breakdown ? "1" : "0");
+        msg.Remove(11);
         if (msg != olddata)
         {
-            SerialManager.instance.sendData(msg);
+            sc.SendSerialMessage(msg);
             olddata = msg;
         }
     }
 
     void readSun()
     {
-        string receivedMessage = SerialManager.instance.readMessage();
+        string receivedMessage = sc.ReadSerialMessage();
 
         if (receivedMessage != null)
         {

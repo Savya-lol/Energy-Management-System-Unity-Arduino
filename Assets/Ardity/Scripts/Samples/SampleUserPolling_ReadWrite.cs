@@ -36,7 +36,7 @@ public class SampleUserPolling_ReadWrite : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("Sending A");
-            serialController.SendSerialMessage("A");
+            serialController.SendSerialMessage("1,1,1,1,1,1,1,1,1,1");
         }
 
         if (Input.GetKeyDown(KeyCode.Z))

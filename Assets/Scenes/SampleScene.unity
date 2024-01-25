@@ -4067,6 +4067,7 @@ MonoBehaviour:
   windmill: {fileID: 1526127860}
   battery: {fileID: 1357284105}
   windDirection: 0
+  sc: {fileID: 749689223}
 --- !u!4 &593522709
 Transform:
   m_ObjectHideFlags: 0
@@ -5057,7 +5058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749689222}
-  - component: {fileID: 749689221}
+  - component: {fileID: 749689223}
   m_Layer: 0
   m_Name: SerialManager
   m_TagString: Untagged
@@ -5065,19 +5066,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &749689221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749689220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d150d9e237c7d42b6af3be369f9efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  portName: 
 --- !u!4 &749689222
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5081,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &749689223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749689220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc5f48af2cffd747a079fe8c632e2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portName: COM8
+  baudRate: 9600
+  messageListener: {fileID: 0}
+  reconnectionDelay: 1000
+  maxUnreadMessages: 1
 --- !u!1 &750122591
 GameObject:
   m_ObjectHideFlags: 0
