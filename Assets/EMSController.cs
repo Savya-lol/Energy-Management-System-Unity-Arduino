@@ -71,7 +71,9 @@ public class EMSController : MonoBehaviour
             {
                 if (totalDemand < 100)
                 {
-                    float increaseAmount = (totalDemand > 0 ? totalDemand * 0.1f : 10); 
+                    float increaseAmount = (LightManagement.instance.lightsOnA + LightManagement.instance.lightsOnB) > 0
+                                     ? 10 - (totalDemand * 0.02f)
+                                     : 10;
                     storage += increaseAmount;
                     storage = Mathf.Min(storage, 100);
                 }
