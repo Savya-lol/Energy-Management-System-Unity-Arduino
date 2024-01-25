@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO.Ports;
+using System.IO;
 public class SerialManager : MonoBehaviour
 {
-    public string portName;
+   /* public string portName;
     SerialPort port;
     public static SerialManager instance;
 
@@ -24,6 +25,8 @@ public class SerialManager : MonoBehaviour
     void Start()
     {
         port = new SerialPort(portName,9600);
+        port.ReadTimeout = 50;
+
         port.Open();
     }
 
@@ -64,5 +67,5 @@ public class SerialManager : MonoBehaviour
         {
             port.Close();
         }
-    }
+    }*/
 }
