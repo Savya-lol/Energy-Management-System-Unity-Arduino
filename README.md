@@ -1,7 +1,7 @@
 <h1><b>Energy Management Sysem (EMS)</b></h1>
 <h2><b>Introduction</b></h2>
 Energy Crisis is one of the problems which is plaguing this world in the current age. Our Energy Management System (EMS) project, if implemented and developed further can solve the problem with high efficiency.
-To show the prototype of our Energy management system, we will be using the integration of sensors and Software. Our hardware system, that will show the prototype of a city implementing our system, will consist of solar panels, servo motors, sensors, leds and other hardware components controlled by an Arduino. Our Software system on the other hand, will be made using Unity Engine which is a software used to build applications and video 
+To show the prototype of our Energy management system, we will be using the integration of sensors and Software. Our hardware system, that will show the prototype of a city implementing our system, will consist of solar panels, servo motors, sensors, leds and other hardware components controlled by an Arduino. Our Software system on the other hand, will be made using Unity Engine which is a software used to build applications and video games.
 <h2><b>Software Used</b></h2>
 <ul>
         <li>Unity Engine 2022.3.12f1</li>
